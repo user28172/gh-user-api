@@ -1,0 +1,10 @@
+spring.application.name: ghuserdata
+
+logging.level.org.zalando.logbook: TRACE
+
+logbook:
+  format: http
+  filter:
+    enabled: true
+    exclude:
+      - /health
