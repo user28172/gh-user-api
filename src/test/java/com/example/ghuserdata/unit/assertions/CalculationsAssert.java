@@ -26,16 +26,16 @@ public class CalculationsAssert extends AbstractAssert<CalculationsAssert, Calcu
         return this;
     }
 
-    public CalculationsAssert hasFollowing(int expected) {
+    public CalculationsAssert hasPublicReposCount(int expected) {
         isNotNull();
-        if (!Objects.equals(actual.following, expected))
-            failWithMessage("Expected user's following to be <%s> but was <%s>", expected, actual.following);
+        if (!Objects.equals(actual.publicReposCount, expected))
+            failWithMessage("Expected user's publicReposCount to be <%s> but was <%s>", expected, actual.publicReposCount);
         return this;
     }
 
     public CalculationsAssert isEqualTo(Calculations expected) {
         this.hasFollowers(expected.followers)
-                .hasFollowing(expected.following)
+                .hasPublicReposCount(expected.publicReposCount)
                 .hasResult(expected.calculate());
         return this;
     }

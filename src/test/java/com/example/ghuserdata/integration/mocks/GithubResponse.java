@@ -7,7 +7,7 @@ public record GithubResponse(
         String type,
         String avatarUrl,
         String createdAt,
-        int following,
+        int publicReposCount,
         int followers
 ) {
     public static GithubResponseBuilder builder() {

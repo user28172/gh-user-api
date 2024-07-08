@@ -5,9 +5,6 @@ import com.example.ghuserdata.integration.mocks.GithubResponse;
 import com.example.ghuserdata.integration.mocks.MockGithubApi;
 import com.example.ghuserdata.integration.restclient.TestApiClient;
 import com.example.ghuserdata.integration.restclient.TestUserResponse;
-import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
-import com.github.tomakehurst.wiremock.client.WireMock;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +28,7 @@ class UsersEndpointTest {
 
     @Test
     void shouldReturn200() {
-        GithubResponse userData = GithubResponse.builder().setFollowing(424).setFollowers(84).build();
+        GithubResponse userData = GithubResponse.builder().setPublicReposCount(424).setFollowers(84).build();
         mockGithubApi.stubUserDataPresent(login, userData);
 
         ResponseEntity<TestUserResponse> response = client.getUser(login);

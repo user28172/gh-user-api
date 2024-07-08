@@ -11,6 +11,7 @@ public record UserData(
         String avatarUrl,
         @JsonProperty("created_at")
         String createdAt,
-        int following,
+        @JsonProperty("public_repos")
+        int publicReposCount,
         int followers
 ) {}

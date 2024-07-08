@@ -7,7 +7,7 @@ public class GithubResponseBuilder {
     private String type = "User";
     private String avatarUrl = "https://avatars.githubusercontent.com/u/583231?v=4";
     private String createdAt = "2011-01-25T18:44:36Z";
-    private int following = 424;
+    private int publicReposCount = 424;
     private int followers = 84;
 
     public GithubResponseBuilder setId(int id) {
@@ -40,8 +40,8 @@ public class GithubResponseBuilder {
         return this;
     }
 
-    public GithubResponseBuilder setFollowing(int following) {
-        this.following = following;
+    public GithubResponseBuilder setPublicReposCount(int publicReposCount) {
+        this.publicReposCount = publicReposCount;
         return this;
     }
 
@@ -51,6 +51,6 @@ public class GithubResponseBuilder {
     }
 
     public GithubResponse build() {
-        return new GithubResponse(id, login, name, type, avatarUrl, createdAt, following, followers);
+        return new GithubResponse(id, login, name, type, avatarUrl, createdAt, publicReposCount, followers);
     }
 }

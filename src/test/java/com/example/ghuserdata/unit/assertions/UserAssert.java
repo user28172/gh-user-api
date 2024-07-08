@@ -79,7 +79,7 @@ public class UserAssert extends AbstractAssert<UserAssert, User> {
         .hasAvatarUrl(expected.avatarUrl())
         .hasCreatedAt(expected.createdAt())
         .calculations()
-                .hasFollowing(expected.following())
+                .hasPublicReposCount(expected.publicReposCount())
                 .hasFollowers(expected.followers());
         return this;
     }

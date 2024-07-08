@@ -9,15 +9,15 @@ public class UserDataBuilder {
     String type = "User";
     String avatarUrl = "https://avatars.githubusercontent.com/u/583231?v=4";
     String createdAt = "2011-01-25T18:44:36Z";
-    int following = 2;
+    int publicReposCount = 2;
     int followers = 4;
 
     static UserDataBuilder create() {
         return new UserDataBuilder();
     }
 
-    public UserDataBuilder setFollowing(int following) {
-        this.following = following;
+    public UserDataBuilder setpublicReposCount(int publicReposCount) {
+        this.publicReposCount = publicReposCount;
         return this;
     }
 
@@ -27,6 +27,6 @@ public class UserDataBuilder {
     }
 
     UserData build() {
-        return new UserData(id, login, name, type, avatarUrl, createdAt, following, followers);
+        return new UserData(id, login, name, type, avatarUrl, createdAt, publicReposCount, followers);
     }
 }

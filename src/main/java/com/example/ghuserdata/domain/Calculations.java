@@ -5,22 +5,22 @@ import java.math.RoundingMode;
 
 public class Calculations {
     public final int followers;
-    public final int following;
+    public final int publicReposCount;
 
-    private Calculations(int followers, int following) {
+    private Calculations(int followers, int publicReposCount) {
         if(followers <= 0) throw new NotPositiveFollowersNumberException();
         this.followers = followers;
-        this.following = following;
+        this.publicReposCount = publicReposCount;
     }
 
     public static Calculations from(UserData userData) {
-        return new Calculations(userData.followers(), userData.following());
+        return new Calculations(userData.followers(), userData.publicReposCount());
     }
 
     public BigDecimal calculate() {
         double followersDouble = followers;
-        double followingDouble = following;
-        double result = 6*(2+followingDouble)/followersDouble;
+        double publicReposCountDouble = publicReposCount;
+        double result = 6*(2+publicReposCountDouble)/followersDouble;
         return new BigDecimal(result).setScale(5, RoundingMode.HALF_DOWN);
     }
 }

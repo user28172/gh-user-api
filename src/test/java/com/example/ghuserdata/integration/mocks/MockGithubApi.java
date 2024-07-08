@@ -33,7 +33,7 @@ public class MockGithubApi {
                         	"type": "%s",
                         	"name": "%s",
                         	"followers": %d,
-                        	"following": %d,
+                        	"public_repos": %d,
                         	"created_at": "%s"
                         }
                         """.formatted(userData.login(),
@@ -42,7 +42,7 @@ public class MockGithubApi {
                         userData.type(),
                         userData.name(),
                         userData.followers(),
-                        userData.following(),
+                        userData.publicReposCount(),
                         userData.createdAt()));
     }
 

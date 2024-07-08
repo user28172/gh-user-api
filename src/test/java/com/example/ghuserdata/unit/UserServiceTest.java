@@ -54,7 +54,7 @@ public class UserServiceTest {
     }
 
     @Test
-    void shouldThrowOnNegativeFollowing() {
+    void shouldThrowOnNegativePublicReposCount() {
 
     }
 
@@ -65,10 +65,10 @@ public class UserServiceTest {
 
     @ParameterizedTest
     @MethodSource("calculationArguments")
-    void shouldCalculateResult(int followers, int following, String expected) {
+    void shouldCalculateResult(int followers, int publicReposCount, String expected) {
         UserData userData = UserDataBuilder.create()
                 .setFollowers(followers)
-                .setFollowing(following)
+                .setpublicReposCount(publicReposCount)
                 .build();
         repositoryMock.givenDataForLogin(login, userData);
 
