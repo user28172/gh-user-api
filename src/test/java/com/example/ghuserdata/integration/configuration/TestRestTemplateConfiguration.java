@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 @TestConfiguration
 public class TestRestTemplateConfiguration {
 
-    //  inject application port (pref. random)
+    // inject application port (pref. random)
 
     @Bean
     TestRestTemplate testRestTemplate() {

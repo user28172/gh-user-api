@@ -8,3 +8,7 @@ logbook:
     enabled: true
     exclude:
       - /health
+
+clients:
+  github:
+    baseUrl: "https://api.github.com"

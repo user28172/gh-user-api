@@ -7,7 +7,7 @@ public class TestUserResponseBuilder {
     String type = "User";
     String avatarUrl = "https://avatars.githubusercontent.com/u/583231?v=4";
     String createdAt = "2011-01-25T18:44:36Z";
-    String calculations = "412.4212222";
+    String calculations = "412.421222200000000000000000";
 
     public TestUserResponse build() {
         return new TestUserResponse(

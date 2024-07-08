@@ -18,6 +18,10 @@ public class TestUserResponseAssert extends AbstractAssert<TestUserResponseAsser
         return this;
     }
 
+    public TestUserResponseAssert hasId(int expected) {
+        return hasId(String.valueOf(expected));
+    }
+
     public TestUserResponseAssert hasLogin(String expected) {
         isNotNull();
         if (!Objects.equals(actual.login(), expected))
