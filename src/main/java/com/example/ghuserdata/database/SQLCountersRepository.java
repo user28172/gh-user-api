@@ -5,11 +5,9 @@ import com.example.ghuserdata.domain.counter.ports.CountersRepository;
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnTransformer;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-@Transactional
 @Repository
 public class SQLCountersRepository implements CountersRepository {
 

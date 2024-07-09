@@ -17,13 +17,13 @@ public class QueryCounter implements QueryRegistry {
         this.countersRepository = countersRepository;
     }
 
+    @Transactional
     @Override
     public void register(String login) {
         increment(login);
     }
 
-    @Transactional
-    public void increment(String login) {
+    private void increment(String login) {
         Counter counter = countersRepository.findCounter(login).orElse(Counter.create(login));
         logger.info("found counter {}", counter);
         Counter incremented = counter.increment();
