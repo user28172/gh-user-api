@@ -1,7 +1,7 @@
 package com.example.ghuserdata.unit.mocks;
 
-import com.example.ghuserdata.domain.UserData;
-import com.example.ghuserdata.domain.ports.UserExternalRepository;
+import com.example.ghuserdata.domain.user.UserData;
+import com.example.ghuserdata.domain.user.ports.UserExternalRepository;
 
 import java.util.Optional;
 

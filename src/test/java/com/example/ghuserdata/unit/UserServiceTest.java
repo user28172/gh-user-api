@@ -1,10 +1,10 @@
 package com.example.ghuserdata.unit;
 
-import com.example.ghuserdata.domain.NotPositiveFollowersNumberException;
-import com.example.ghuserdata.domain.User;
-import com.example.ghuserdata.domain.UserData;
-import com.example.ghuserdata.domain.UserService;
-import com.example.ghuserdata.domain.ports.UserQuery;
+import com.example.ghuserdata.domain.user.NotPositiveFollowersNumberException;
+import com.example.ghuserdata.domain.user.User;
+import com.example.ghuserdata.domain.user.UserData;
+import com.example.ghuserdata.domain.user.UserService;
+import com.example.ghuserdata.domain.user.ports.UserQuery;
 import com.example.ghuserdata.unit.mocks.MockUserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

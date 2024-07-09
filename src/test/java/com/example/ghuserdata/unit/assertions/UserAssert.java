@@ -1,7 +1,7 @@
 package com.example.ghuserdata.unit.assertions;
 
-import com.example.ghuserdata.domain.User;
-import com.example.ghuserdata.domain.UserData;
+import com.example.ghuserdata.domain.user.User;
+import com.example.ghuserdata.domain.user.UserData;
 import org.assertj.core.api.AbstractAssert;
 
 import java.util.Objects;
@@ -57,18 +57,6 @@ public class UserAssert extends AbstractAssert<UserAssert, User> {
 
     public CalculationsAssert calculations() {
         return new CalculationsAssert(this.actual.calculations());
-    }
-
-    public UserAssert isEqualTo(User expected) {
-        hasId(expected.id())
-        .hasLogin(expected.login())
-        .hasName(expected.name())
-        .hasType(expected.type())
-        .hasAvatarUrl(expected.avatarUrl())
-        .hasCreatedAt(expected.createdAt())
-        .calculations()
-                .isEqualTo(expected.calculations());
-        return this;
     }
 
     public UserAssert isOriginatedFrom(UserData expected) {

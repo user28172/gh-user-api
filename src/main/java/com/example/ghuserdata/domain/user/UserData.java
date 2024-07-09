@@ -1,4 +1,4 @@
-package com.example.ghuserdata.domain;
+package com.example.ghuserdata.domain.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

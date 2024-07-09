@@ -1,6 +1,6 @@
 package com.example.ghuserdata.api;
 
-import com.example.ghuserdata.domain.User;
+import com.example.ghuserdata.domain.user.User;
 
 public record UserResponse(
         String id,

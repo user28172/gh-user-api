@@ -1,7 +1,7 @@
 package com.example.ghuserdata.clients;
 
-import com.example.ghuserdata.domain.UserData;
-import com.example.ghuserdata.domain.ports.UserExternalRepository;
+import com.example.ghuserdata.domain.user.UserData;
+import com.example.ghuserdata.domain.user.ports.UserExternalRepository;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;

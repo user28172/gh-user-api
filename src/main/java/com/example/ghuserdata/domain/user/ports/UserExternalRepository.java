@@ -1,6 +1,6 @@
-package com.example.ghuserdata.domain.ports;
+package com.example.ghuserdata.domain.user.ports;
 
-import com.example.ghuserdata.domain.UserData;
+import com.example.ghuserdata.domain.user.UserData;
 
 import java.util.Optional;
 

@@ -1,6 +1,6 @@
 package com.example.ghuserdata.unit.assertions;
 
-import com.example.ghuserdata.domain.Calculations;
+import com.example.ghuserdata.domain.user.Calculations;
 import org.assertj.core.api.AbstractAssert;
 
 import java.math.BigDecimal;

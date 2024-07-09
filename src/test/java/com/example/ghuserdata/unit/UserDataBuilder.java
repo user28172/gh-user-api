@@ -1,6 +1,6 @@
 package com.example.ghuserdata.unit;
 
-import com.example.ghuserdata.domain.UserData;
+import com.example.ghuserdata.domain.user.UserData;
 
 public class UserDataBuilder {
     String id = "583231";

@@ -1,7 +1,7 @@
 package com.example.ghuserdata.unit.assertions;
 
-import com.example.ghuserdata.domain.Calculations;
-import com.example.ghuserdata.domain.User;
+import com.example.ghuserdata.domain.user.Calculations;
+import com.example.ghuserdata.domain.user.User;
 import org.assertj.core.api.Assertions;
 
 import java.util.Optional;
