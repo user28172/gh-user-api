@@ -1,4 +1,4 @@
 CREATE TABLE COUNTER (
     login VARCHAR(64) PRIMARY KEY,
-    counter_value INTEGER NOT NULL
+    request_count INTEGER NOT NULL
 );

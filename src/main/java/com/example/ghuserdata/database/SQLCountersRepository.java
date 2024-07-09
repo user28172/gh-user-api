@@ -19,7 +19,7 @@ public class SQLCountersRepository implements CountersRepository {
     @Override
     public Optional<Counter> findCounter(String login) {
         CounterTable result = entityManager.find(CounterTable.class, login.toLowerCase(), LockModeType.PESSIMISTIC_WRITE);
-        if (result != null) return Optional.of(new Counter(result.login, result.counterValue));
+        if (result != null) return Optional.of(new Counter(result.login, result.requestCount));
         else return Optional.empty();
     }
 
@@ -35,13 +35,13 @@ class CounterTable {
     @Id
     @ColumnTransformer(write = "LOWER(?)")
     String login;
-    int counterValue;
+    int requestCount;
 
     CounterTable() {
     }
 
-    CounterTable(String login, int counterValue) {
+    CounterTable(String login, int requestCount) {
         this.login = login;
-        this.counterValue = counterValue;
+        this.requestCount = requestCount;
     }
 }
